@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Accueil - C'est cosmique </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="pageSlide/css/jquery.pageslide.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="bandeau"><a href="index.html" title="accueil" class="click"><img src="images/bandeau.jpg" alt=""></a></div>
+            <a class="open" href="#js-menu">Menu</a>
+        </header>
+        <nav id="js-menu" class="menu">
+            <h1>Menu principal</h1>
+            <ul id="mainMenu">
+                <li><a href="index.html" title="accueil">Accueil</a></li>
+                <li><a href="presentation.html" title="presentation">Présentation</a></li>
+                <li id="planetes">
+                    <a href="#" title="les planetes">Les planètes</a>
+                    <ul class="derouler">
+                        <li><a href="planetesI.html" title="les planetes interieures">les planètes intérieures</a></li>
+                        <li><a href="planetesG.html" title="les planetes geantes">les planètes géantes</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="accueilTopContact">
+                <h2>Contactez-nous à l'aide du formulaire ci-dessous</h2>
+                <form action="mailto:victor@aaa.fr?subject=contact" method="post">
+                    <ul>
+                        <li>
+                            <label for="nom">Nom* :</label>
+                            <input type="text" name="nom" id="nom" class="taille"><span>Champ invalide</span>
+                        </li>
+                        <li>
+                            <label for="prenom">Prénom :</label>
+                            <input type="text" name="prenom" id="prenom" class="taille">
+                        </li>
+                        <li>
+                            <label for="sexe" id="sexe">
+                                Sexe :
+                            </label>
+                            <input type="radio" name="sexe" class="dimension" id="homme" value="hommme">
+                            <label for="homme" class="size ">Homme</label>
+                            <input type="radio" name="sexe" class="dimension" id="femme" value="femme">
+                            <label for="femme" class="size">Femme</label>
+                            <input type="radio" name="sexe" class="dimension" id="extra" value="extra-terrestre">
+                            <label for="extra" id="lastLabel" class="size">Extra-terrestre</label>
+                        </li>
+                        <li>
+                            <label for="tel">Tél :</label>
+                            <input type="tel" name="tel" id="tel" maxlength="10" class="taille"><span>Champ invalide</span>
+                        </li>
+                        <li>
+                            <label for="email">E-mail* :</label>
+                            <input type="email" name="email" id="email" class="taille"><span>Champ invalide</span>
+                        </li>
+                        <li>
+                            <label for="date">Date :</label>
+                            <input type="date" name="date" id="date">
+                        </li>
+                        <li>
+                            <label for="pieceJ">Pièce jointe :</label>
+                            <input type="file" name="pieceJ" id="pieceJ">
+                        </li>
+                        <li>
+                            <label for="textA">Votre message :</label>
+                            <textarea name="textA" id="textA" class="taille" cols="30" rows="10"></textarea>
+                        </li>
+                        <li id="bout">
+                            <input type="reset" class="dimension" id="reset" value="Réinitialiser">
+                            <input type="submit" id="submit" class="dimension" value="Valider">
+                        </li>
+                    </ul>
+                </form>
+            </section>
+            <aside id="adresse">
+                <div id="contact">
+                    <h2>Contactez-nous :</h2>
+                    <p>Tél : 01 02 03 04 05</p>
+                    <p id="rue">rue du cosmos 44049 Triton</p>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10789.026356538841!2d-0.5590805!3d47.4654291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf0a4ea6efc45f0a0!2sCEFii%20-%20Ecole%20Sup%C3%A9rieure%20du%20Web!5e0!3m2!1sfr!2spt!4v1614288953994!5m2!1sfr!2spt" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <nav id="menuFooter">
+                <a href="#">Accueil</a>
+                <a href="#" class="borderLeft">Mentions légales</a>
+                <a href="contact.html" class="borderLeft">Contact</a>
+            </nav>
+        </footer>
+    </div>
+	<script type="text/javascript" src="pageSlide/js/jquery.pageslide.min.js"></script>
+	<script type="text/javascript">
+		$(".open").pageslide();
+	</script>
+</body>
+</html>

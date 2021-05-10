@@ -1,0 +1,182 @@
+body{
+    background: url(Images/images/fond.jpg);
+}
+section{
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    width: 1280px;
+    height: 960px;
+    background-color: #001500;
+    border: 1px solid white;
+    font-family: 'K2D', sans-serif;
+}
+#header1{
+    height: 301px;
+    margin-top: -15px;
+    background-image: url(Images/images/bandeau.jpg);
+}
+#menu{
+    position: fixed;
+    overflow: hidden;
+    margin-left: -35px;
+    width: 1278px;
+    display: block;
+
+}
+#menu li{
+    overflow: hidden;
+    margin-left: -4px;
+    height: 60px;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    transition: height 0.5s;
+}
+#hover1:hover{
+    color: green;
+    overflow: hidden;
+    margin-left: -4px;
+    height: 301px;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+}
+#menu ul li{
+    margin-top: 2px;
+    margin-left: -20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#menu a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 20px;
+    background-color: rgb(0, 0, 0);
+    display: block;
+    height: 40px;
+}
+#menu a:hover{
+    color: green;
+}
+#events{
+    text-align: center;
+    background-color: white;
+    width: 402px;
+    height: 510px;
+}
+#title{
+    height: 21px;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 21px;
+}
+#imgevents{
+    margin-bottom: -20px;
+}
+nav{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 1200px;
+}
+#bg{
+    display: block;
+    float: left;
+    padding-left: 30px;
+    margin-left: 40px;
+    height: 550px;
+    width: 650px;
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px 2px white;
+    background-color: white;
+}
+footer{
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: -600px;
+    background-color: rgb(0, 0, 0);
+}
+#contact{
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.font{
+    font-weight: bolder;
+    font-size: 17px;
+}
+.float{
+    margin-left: 20px;
+    display: block;
+    width: 230px;
+    float: left;
+}
+fieldset{
+    height: 40px;
+    width: 550px;
+    margin: -15px 0 10px 20px;
+    border: 3px solid  #001500;
+    border-radius: 5px;
+}
+.sub{
+    display: inline-block;
+}
+.block{
+    margin-top: -3px;
+    display: block;
+}
+.width{
+    width: 300px;
+    max-height: 70px;
+}
+.bggreen{
+    padding: 5px;
+    background-color: #001500;
+    color: white;
+    border-radius: 5px;
+}
+.bggreen:active{
+    padding: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+#professionnel{
+    margin-left: 150px;
+}
+#info{
+    margin-top: 12px;
+}
+#message{
+    margin-bottom: 10px;
+}
+#button{
+    margin-left: 250px;
+}
+#block{
+    height: 550px;
+    overflow: hidden;
+    font-weight: bolder;
+    color: white;
+    margin-left: 100px;
+    width: 450px;
+    text-align: center;
+    font-size: 30px;
+}
+iframe{
+    position: relative;
+    left: 430px;
+    transition-property: left;
+    transition-duration: 1s;
+}
+iframe:hover,
+span:hover+iframe{
+    position: relative;
+    left: 0;
+}

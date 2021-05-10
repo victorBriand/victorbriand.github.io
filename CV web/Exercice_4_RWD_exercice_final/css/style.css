@@ -1,0 +1,759 @@
+/* menu principal /// Body /// En-tête */
+html{
+	font-size:100%;
+}
+
+html,body{
+	background-color: #000;
+	height:100%;
+}
+
+body{
+	font-family: 'Audiowide', cursive;
+	width:96%;
+	margin: 0 auto;
+	font-size:1em;
+}
+
+#wrapper{
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 0 0 4px #999;
+	max-width: 1024px;
+}
+
+header, #bandeau{
+	width: 100%;
+	height: 100%;
+}
+
+#bandeau a img{
+	max-width: 100%;
+}
+
+.open{
+	display:block;
+	margin-left: 0.5em;
+	width:2.5em;
+	height:1.875em;
+	background: url(../pageSlide/images/menu.png) center no-repeat #999;
+	border-radius:8px;
+	text-indent:-999em;
+}
+
+h1{
+	width: 100%;
+	font-size: 1.25em;
+	padding-left: 2%;
+	display: none;
+}
+
+.menu{
+	height: 2em;
+	width: 96%;
+	margin: 1% auto;
+	display:none;
+}
+
+.menu a{
+	margin-bottom: 3%;
+	display: inline-block;
+	font-size: 1em;
+	color:rgb(255, 255, 255);
+	line-height:1.5em;
+	border:1px solid white;
+	background: linear-gradient(90deg, rgba(112,112,112,1) 0%, rgba(0,0,0,1) 100%);
+	border-radius:20px 20px 0 20px;
+	text-decoration:none;
+	text-align:center;
+}
+
+#pageslide .menu{
+	display:block;
+}
+
+#pageslide .menu ul{
+	width: 100%;
+}
+
+#pageslide .menu a{
+	margin-top: 5%;
+	display:block;
+	width:100%;
+	color:#FFF;
+	box-shadow:0 1px 0 #555;
+}
+
+#mainMenu{
+	display: flex;
+	justify-content: space-around;
+}
+
+#mainMenu>li{
+	width: 100%;
+	padding: 1%;
+}
+
+#mainMenu a{
+	width: 100%;
+}
+
+#planetes{
+	height: 1.3em;
+	overflow: hidden;
+	z-index: 1000;
+	transition-property: height;
+    transition-duration: 0.5s;
+}
+
+#planetes:hover{
+	height: 8em;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+.derouler{
+	padding: 0;
+	width: 100%;
+}
+
+a:hover{
+	opacity:0.7;
+}
+/* Menu principal /// Body /// En-tête */
+
+
+
+/* General */
+main{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 3%;
+}
+
+aside{
+	color: white;
+	margin-left: 1%;
+	width: 25%;
+	margin-top: 3%;
+}
+
+aside ul{
+	padding: 0;
+	list-style-type: none;
+}
+
+aside h2{
+	font-size: 1em;
+	margin-bottom: 7%;
+	width: 90%;
+	background-color: #707070;
+	text-decoration: none;
+	color: white;
+	border-radius: 20px;
+	padding: 0.1em 0.625em;
+}
+
+aside ul li>p{
+	display: none;
+	color: white;
+	margin-bottom: 5%;
+}
+
+footer{
+	max-width: 100%;
+	height: 3.563em;
+	background-image: url(../images/footer.jpg);
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+#menuFooter{
+	display: flex;
+	justify-content: space-around;
+	margin: 0;
+}
+
+footer a{
+	width: 30%;
+	margin-top: 0.5em;
+	color: white;
+	text-decoration: none;
+}
+
+.borderLeft{
+	border-left: 2px solid white;
+}
+
+span{
+	display: none;
+	color: red;
+	font-size: 0.8em;
+}
+/* General */
+
+
+
+
+/* Page Index */
+#accueilTop{
+	margin-top: 3%;
+	margin-left: 2%;
+	border: 1px solid #FFF;
+	-webkit-box-shadow: 10px 11px 6px -7px rgba(255,255,255,1);
+	-moz-box-shadow: 10px 11px 6px -7px rgba(255,255,255,1);
+	box-shadow: 10px 11px 6px -7px rgba(255,255,255,1);
+	width: 65%;
+	/* aussi utilisé dans la page Presentation */
+}
+
+#accueilTop iframe{
+	max-width: 100%;
+	/* aussi utilisé pour la page contact */
+}
+
+#accueilTop div{
+	overflow: hidden;
+	/* aussi utilisé dans la page Presentation */
+}
+
+#accueilTop h2, #accueilTopContact h2{
+	margin: 0.5em 0;
+	font-size: 1.25em;
+	text-align: center;
+	color: white;
+	/* aussi utilisé pour la page contact */
+}
+
+#espace{
+	margin-bottom: 0.125em;
+	height: 10.125em;
+	width: 100%;
+	background-image: url(../images/espace.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+#cosmonaute{
+	background: url(../images/cosmonaute.png) no-repeat;
+	background-size: cover;
+	width: 5.25em;
+	height: 5.5em;
+	z-index: 1000;
+	position: absolute;
+	-webkit-animation: deplacer 5s alternate infinite;
+	animation: deplacer 5s alternate infinite;
+}
+
+#cosmonaute:hover{
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
+#cosmonaute:hover::after{
+	content: "Hello";
+	color: white;
+	margin-left: 5.25em;
+}
+
+@keyframes deplacer{
+	from {
+		-webkit-transform: scale(0.1) rotate(180deg);
+		transform: scale(0.1) rotate(180deg);
+		right: 62.25em;
+		top: 31em;
+	}
+	to{
+		-webkit-transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0deg);
+		right: 12em;
+		top: 20em;
+	}
+}
+
+@-webkit-keyframes deplacer{
+	from {
+		-webkit-transform: scale(0.1) rotate(180deg);
+		transform: scale(0.1) rotate(180deg);
+		right: 62.25em;
+		top: 23.75em;
+	}
+	to{
+		-webkit-transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0deg);
+		right: 12em;
+		top: 20em;
+	}
+
+}
+
+#accueilTop figure a{
+	text-decoration: none;
+	color: white;
+}
+
+#planetesAccueil{
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+#accueilTop figure img{
+	max-width: 100%;
+}
+
+.rotationIMG{
+	transition: transform 0.5s;
+}
+
+.rotationIMG:hover{
+	transform: rotate(45deg);
+}
+/* Page Index */
+
+
+
+
+
+/* Page Presentation */
+#textVideo{
+	margin-top: 1%;
+}
+
+#textVideo p{
+	margin-top: 7%;
+	color: white;
+}
+/* Page Presentation */
+
+
+
+
+
+/* Page Planetes Interieures */
+#asidePlaneteI{
+	text-align: center;
+}
+
+#asidePlaneteI p{
+	margin-bottom: 8%;
+}
+
+#boutonPlanete input{
+	margin-bottom: 2%;
+	width: 40%;
+	color: white;
+	background-color: grey;
+}
+
+#boutonPlanete li:last-of-type{
+	margin-top: 5%;
+}
+
+#planeteI{
+	position: relative;
+	width: 60em;
+	height: 50em;
+}
+
+#planeteI div{
+	position: absolute;
+}
+
+#soleil{
+	background: url(../images/soleil.png) no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+#mercure{
+	right: 50%;
+	position: absolute;
+	background: url(../images/mercure.png) no-repeat;
+	background-position: center left;
+	width: 14.8em;
+	height: 100%;
+	z-index: 2;
+}
+
+#venus{
+	right: 50%;
+	position: absolute;
+	background: url(../images/venus.png) no-repeat;
+	background-position: center left;
+	width: 19.8em;
+	height: 100%;
+	z-index: 1;
+}
+
+#terre{
+	right: 50%;
+	position: absolute;
+	background: url(../images/terre.png) no-repeat;
+	background-position: center left;
+	width: 23.9em;
+	height: 100%;
+	z-index: 0;
+	
+}
+
+#mars{
+	right: 50%;
+	position: absolute;
+	background: url(../images/mars.png) no-repeat;
+	background-position: center left;
+	width: 31.8em;
+	height: 100%;
+	z-index: -1;
+	
+}
+
+.spinMercure{
+	transform-origin: right;
+	animation: spin 0.88s linear infinite;
+}
+.spinTerre{
+	transform-origin: right;
+	animation: spin 3.65s linear infinite;
+}
+.spinMars{
+	transform-origin: right;
+	animation: spin 6.87s linear infinite;
+}
+.spinVenus{
+	transform-origin: right;
+	animation: spin 2.25s linear infinite;
+}
+
+@keyframes spin{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+
+	}
+}
+
+
+
+
+
+
+
+/* left = planete / distance de la planete la plus eloignée * 100 */
+/* Page Planetes Interieures */
+
+
+
+
+
+/* Page Planetes Geantes */
+#sectionGeantes{
+	margin-top: 3%;
+	vertical-align: top;
+}
+
+#sectionGeantes h2{
+	margin: 0.5em 0;
+	font-size: 1.25em;
+	text-align: center;
+	color: white;
+}
+
+#planetesG{
+	height: 80%;
+	margin: 5% auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+#planetesG figure{
+	height: 100%;
+	text-align: center;
+	color: white;
+	width: 15%;
+}
+
+#planetesG figure img{
+	position: relative;
+	flex-direction: row;
+	display: flex;
+	margin: 1em auto;
+	width: 80%;
+	max-width: 100%;
+}
+
+#planetesG figure img:hover{
+	margin: 0 auto 1em auto;
+	width: 90%;
+}
+
+#textCacher div{
+	z-index: 2000;
+	display: none;
+	text-align: left;
+	background-image: url("/images/ciel.jpg");
+	border: 1px solid white;
+	border-radius: 20px;
+	padding: 2%;
+	position: fixed;
+	top: 25%;
+	left: 20%;
+	right: 20%;
+}
+#textCacher div img{
+	display: inline-block;
+	width: 10%;
+}
+#textCacher div h2{
+	font-size: 1.25em;
+	color: white;
+	display: inline-block;
+	margin: 0 20% !important;
+}
+#textCacher div p{
+	color: white;
+	margin-top: 5%;
+	height: 10em;
+}
+#textCacher div input{
+	color: white;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	background: none;
+	border: 1px solid white;
+}
+
+.opacity{
+	opacity: 50%;
+}
+/* Page Planetes Geantes */
+
+
+
+
+
+/* Page Contact */
+#accueilTopContact{
+	margin-top: 3%;
+	vertical-align: top;
+	margin-left: 2%;
+	display: inline-block;
+	width: 60%;
+}
+
+form{
+	color: white;
+	margin-top: 5%;
+}
+
+.taille{
+	width: 50%;
+}
+
+form input, textarea{
+	border-radius: 5px;
+}
+
+form label:not(.size){
+	display: inline-block;
+	width: 30%;
+}
+form li{
+	margin-bottom:0.125em;
+}
+#bout{
+	margin-left: 31%;
+}
+
+#adresse{
+	width: 35%;
+}
+
+#contact{
+	height: 80%;
+	overflow: hidden;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+#contact h2{
+	margin-top: 0.5em;
+	font-size: 1.25em;
+	margin-bottom: 3%;
+	background: none;
+}
+
+#map{
+	margin-top: 5%;
+    position: relative;
+    left: 25em;
+    transition-property: left;
+    transition-duration: 1s;
+}
+
+#map:hover,
+#rue:hover+#map{
+	position: relative;
+    left: 0;
+}
+
+form input:focus, textarea:focus{
+	background-color: rgb(48, 48, 48);
+	color: white;
+}
+
+#adresse{
+	animation: adresse 1s linear;
+}
+
+@-webkit-keyframes adresse {
+
+	from {
+		-webkit-transform: rotate(-180deg) scale(0);
+		transform: rotate(-180deg) scale(0);
+	}
+
+	to {
+		-webkit-transform: rotate(0) scale(1);
+		transform: rotate(0) scale(1);
+	}
+}
+
+@keyframes adresse {
+
+	from {
+		-webkit-transform: rotate(-180deg) scale(0);
+		transform: rotate(-180deg) scale(0);
+	}
+
+	to {
+		-webkit-transform: rotate(0) scale(1);
+		transform: rotate(0) scale(1);
+	}
+}
+/* Page Contact */
+
+
+
+
+
+@media only screen and (min-width:600px){
+
+	.menu{
+		display:block;
+	}
+
+	.open{
+		display:none;
+	}
+
+}
+
+@media screen and (max-width:600px){
+	/* Menu principal /// Body /// En-tête */
+	#wrapper{
+		box-shadow: none;
+	}
+	/* Menu principal /// Body /// En-tête */
+	
+	
+	
+	
+	/* General */
+	body{
+		width: 100%;
+		margin: 0;
+	}
+
+	main{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	h1{
+		text-align: center;
+		display: block;
+	}
+	
+	aside{
+		width: 100%;
+	}
+
+	.reduce{
+		width: 50%;
+		/* class que j'ajouterai lorsque le menu lateral apparait */
+	}
+
+	#mainMenu{
+		display: inline-block;
+	}
+
+	.derouler, #planetes{
+		display: none;
+	}
+	/* General */
+	
+	
+	
+	
+	
+	/* Page Index */
+	#infosAccueil{
+		display: none;
+	}
+	
+	#accueilTop{
+		margin: 0;
+		width: 100%;
+		border: none;
+		box-shadow: none;
+	}
+
+	#cosmonaute{
+		display: none;
+	}
+	/* Page Index */
+	
+
+	
+	/* Page Contact */
+	#accueilTopContact {
+		margin: 0 auto;
+		width: 100%;
+		border: none;
+	}
+
+	form label:not(.size),#textA , form input:not(.dimension){
+		display: inline-block;
+		width: 98%;
+	}
+
+	#bout{
+		margin-left: 0;
+	}
+
+	#map{
+		margin-top: 5%;
+		position: relative;
+		left: 0;
+	}
+
+	#adresse{
+		width: 60%;
+		height: 100%;
+		margin: 0 auto;
+	}
+
+	
+	/* Page Contact */
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Dans le HEAD
+    @CSS reset
+    @CSS style
+    @Changer la langue en "fr"
+    @Changer le "title"
+    @Ajouter un logo au "title"
+    @Ajouter le font qu'il faut ensuite ajouter dans le "body"
+    @Le CDN jquery
+    @En dernier "script.js"
+
+    !!!TESTER
+     -->
+
+     <!--
+      @Définir dans le BODY:
+        1 DIV WRAPPER
+          2 HEADER
+          3 NAV
+          4 MAIN
+          5 FOOTER
+      @"HTML/body/#wrapper à paramétrer en css"
+      @HTML de chaque page
+      @FOOTER = ul>li>a
+      -->
+
+      <!-- 
+        @Définir le CSS de chaque page dans l'ordre
+       -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <title>Les Cabanes du CEFii</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/80e78312f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.pageslide.css">
+    <link rel="stylesheet" href="css/clarity-lightbox.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</head>
+<div class="wrapper">
+    <balise id="hautdepage"></balise>
+    <body>
+        <div id="wrapper">
+            <div id="menuNav">
+                <a class="open" href="#js-menu">Menu</a>
+                <nav id="js-menu" class="menu">
+                    <h1>Menu principal</h1>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i> Accueil</a></li>
+                        <li><a href="#pageCabanes"><i class="fab fa-pagelines"></i> Cabanes</a>
+                      <ul id="derouler">
+                          <li><a href="#">En couple</a></li>
+                          <li><a href="#">En famille</a></li>
+                          <li class="borderNo"><a href="#">Entre amis</a></li>
+                        </ul>
+                    </li>
+                    <li id="logo"><img src="img/logo.png" alt="logo"></li>
+                  <li class="margLeft"><a href="#"><i class="fas fa-calendar-alt"></i> Réservations</a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+            </div>
+            <header>
+            <div id="titreSite">
+                <div>
+                    <h1>Bienvenue aux cabanes du CEFii</h1>
+                </div>
+            </div>
+            </header>
+            <div role="main">
+            </div>
+            <main>
+                <section id="cabanes">
+                    <balise id="pageCabanes"></balise>
+                    <figure>
+                        <a class="lightbox" id="c1" href="img/cabane1.jpg">
+                            <img class="img-lightbox" alt="cabane 1" src="img/cabane1.jpg">
+                            <figcaption class="disNone">Sur l'eau</figcaption>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae unde dolore temporibus non voluptates cupiditate aspernatur quas quaerat rerum id nam, rem, repudiandae officiis maiores veritatis veniam hic debitis!</div>
+                        </a>
+                        <a class="lightbox" id="c2" href="img/cabane2.jpg">
+                            <img class="img-lightbox" alt="cabane 2" src="img/cabane2.jpg">
+                            <figcaption class="disNone">A la neige</figcaption>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae unde dolore temporibus non voluptates cupiditate aspernatur quas quaerat rerum id nam, rem, repudiandae officiis maiores veritatis veniam hic debitis!</div>
+                        </a>
+                        <a class="lightbox" id="c3" href="img/cabane3.jpg">
+                            <img class="img-lightbox" alt="cabane 3" src="img/cabane3.jpg">
+                            <figcaption class="disNone">A la mer</figcaption>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae unde dolore temporibus non voluptates cupiditate aspernatur quas quaerat rerum id nam, rem, repudiandae officiis maiores veritatis veniam hic debitis!</div>
+                        </a>
+                    </figure>
+                </section>
+                <section id="bottom">
+                    <div id="video">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ZHuA3sRz5yQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea fugit asperiores illum et odit laudantium maiores inventore? At libero, modi laborum molestiae error ab. Neque vitae rerum vero aperiam sed.</p>
+                    </div>
+                    <div id="aside">
+                        <div id="form">
+                            <h2 class="borderBottom">Suivez-nos actualités</h2>
+                            <form name="formulaireContact" action="aaa@bbb.fr" method="POST" enctype="multipart/form-data">
+                                <ul>
+                                    <li>
+                                        <label for="nom"></label>
+                                        <input class="inpTxt" id="nom" name="nom" type="text" autofocus
+                                        placeholder="Votre nom" /><span></span>
+                                    </li>
+                                    <li>
+                                        <label for="prenom"></label>
+                                        <input class="inpTxt" id="prenom" name="prenom" type="text"
+                                            placeholder="Votre prénom" /><span></span>
+                                    </li>
+                                    <li>
+                                        <label for="email"></label>
+                                        <input class="inpTxt" id="email" name="email" type="mail"
+                                        placeholder="E-mail" /><span></span>
+                                    </li>
+                                    <li>
+                                        <label></label>
+                                        <input class="boutton" type="submit" id="envoi" value="S'inscrire à la Newsletter" /><span  class="green"></span>
+                                    </li>
+
+                                    <!-- <li>
+                                        <label for="nom"></label>
+                                        <input class="inpTxt" type="text" name="nom" id="nom" placeholder="Nom">
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <label for="prenom"></label>
+                                        <input class="inpTxt" type="text" name="prenom" id="prenom" placeholder="Prénom">
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <label for="email"></label>
+                                        <input class="inpTxt" type="email" name="email" id="email" placeholder="E-mail">
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <input class="boutton" id="#envoi" type="submit" value="S'inscrire à la Newsletter">
+                                        <span></span>
+                                    </li> -->
+                                </ul>
+                            </form>
+                        </div>
+                        <div id="map">
+                            <h2 class="borderBottom">Nous rejoindre</h2>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21254.459515645136!2d4.977106425089477!3d48.24883412086258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ecf455da6152fd%3A0x75968ec5532aee87!2zRm9yw6p0IGRlIGwnw4l0b2lsZQ!5e0!3m2!1sfr!2spt!4v1615469664529!5m2!1sfr!2spt" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <a id="haut" href="#hautdepage"><i class="fas fa-arrow-up"></i></a>
+            <footer>
+              <ul>
+                <li class="left"><a href="#">Plan du site</a></li>
+                <li class="left"><a href="#">Mentions Légales</a></li>
+                <li class="left"><a href="#">Contact</a></li>
+                <li class="left"><a href="#">CGV</a></li>
+                <li class="right"><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a></li>
+              </ul>
+            </footer>
+        </div>
+        <script src="js/jquery.pageslide.min.js"></script>
+        
+      <!--on ne met pas le script dans le head car le plug-in crée une div-->
+      <script src="js/clarity-lightbox.min.js"></script>
+      <script>
+        $(".open").pageslide();
+      </script>
+    </body>
+</div>
+</html>
