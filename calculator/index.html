@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous">
+    
+    <!-- VUE.JS -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
+    </script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container text-center">
+            <div id="result" class="col-sm-4 mx-auto mt-5">
+                <div class="row">
+                    <div class="col-sm-12 border text-white bg-primary border">
+                        {{current || 0}}
+                    </div>
+                    <div class="col-sm-3 border text-white bg-secondary" @click="clear">C</div>
+                    <div class="col-sm-3 border text-white bg-secondary" @click="sign">+/-</div>
+                    <div class="col-sm-3 border text-white bg-secondary" @click="percent">%</div>
+                    <div class="col-sm-3 border text-white bg-warning" @click="divide()">/</div>
+                    <div class="col-sm-3 border bg-light" @click="append('7')">7</div>
+                    <div class="col-sm-3 border bg-light" @click="append('8')">8</div>
+                    <div class="col-sm-3 border bg-light" @click="append('9')">9</div>
+                    <div class="col-sm-3 border text-white bg-warning" @click="multiply()">X</div>
+                    <div class="col-sm-3 border bg-light" @click="append('4')">4</div>
+                    <div class="col-sm-3 border bg-light" @click="append('5')">5</div>
+                    <div class="col-sm-3 border bg-light" @click="append('6')">6</div>
+                    <div class="col-sm-3 border text-white bg-warning" @click="minus()">-</div>
+                    <div class="col-sm-3 border bg-light" @click="append('1')">1</div>
+                    <div class="col-sm-3 border bg-light" @click="append('2')">2</div>
+                    <div class="col-sm-3 border bg-light" @click="append('3')">3</div>
+                    <div class="col-sm-3 border text-white bg-warning" @click="plus()">+</div>
+                    <div class="col-sm-6 border bg-light" @click="append('0')">0</div>
+                    <div class="col-sm-3 border bg-light" @click="dot()">.</div>
+                    <div class="col-sm-3 border text-white bg-warning" @click="equal()">=</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script 
+        src="js/script.js">
+    </script>
+</body>
+<script 
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+    crossorigin="anonymous">
+</script>
+<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+    crossorigin="anonymous">
+</script>
+<script 
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+    crossorigin="anonymous">
+</script>
+</html>
